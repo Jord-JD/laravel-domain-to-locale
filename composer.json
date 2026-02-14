@@ -32,6 +32,6 @@
     }
   },
   "replace": {
-    "jord-jd/laravel-domain-to-locale": "self.version"
+    "divineomega/laravel-domain-to-locale": "self.version"
   }
 }
