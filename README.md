@@ -9,7 +9,7 @@ the following Composer command from the root of your
 project.
 
 ```bash
-composer require divineomega/laravel-domain-to-locale
+composer require jord-jd/laravel-domain-to-locale
 ```
 
 ## Setup
