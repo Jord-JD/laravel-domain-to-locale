@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "DivineOmega\\LaravelDomainToLocale\\": "src/"
+      "JordJD\\LaravelDomainToLocale\\": "src/"
     }
   },
   "require-dev": {
@@ -24,11 +24,11 @@
   "extra": {
     "laravel": {
       "providers": [
-        "DivineOmega\\LaravelDomainToLocale\\ServiceProvider"
+        "JordJD\\LaravelDomainToLocale\\ServiceProvider"
       ]
     },
     "branch-alias": {
-      "dev-master": "2.0-dev"
+      "dev-master": "3.0-dev"
     }
   },
   "replace": {

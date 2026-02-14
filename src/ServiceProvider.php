@@ -1,6 +1,6 @@
 <?php
 
-namespace DivineOmega\LaravelDomainToLocale;
+namespace JordJD\LaravelDomainToLocale;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 

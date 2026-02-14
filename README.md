@@ -19,7 +19,7 @@ within your `app\Http\Kernel.php` file. Just add the
 line below to your `$middleware` array.
 
 ```php
-\DivineOmega\LaravelDomainToLocale\Http\Middleware\DomainToLocale::class,
+\JordJD\LaravelDomainToLocale\Http\Middleware\DomainToLocale::class,
 ```
 
 After installation, the config file must be setup within
@@ -27,7 +27,7 @@ your project. To do so, simply run the following Artisan
 command.
 
 ```bash
-php artisan vendor:publish --provider="DivineOmega\LaravelDomainToLocale\ServiceProvider"
+php artisan vendor:publish --provider="JordJD\LaravelDomainToLocale\ServiceProvider"
 ```
 
 ## Configuration
