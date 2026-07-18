@@ -2,6 +2,8 @@
 
 Change your Laravel app's locale based on the domain name.
 
+Supports Laravel 5.6 through 13. The package configuration is loaded automatically; publishing it is only required when you want to customise mappings.
+
 ## Installation
 
 To install the Laravel Domain To Locale package, just run
@@ -22,9 +24,7 @@ line below to your `$middleware` array.
 \JordJD\LaravelDomainToLocale\Http\Middleware\DomainToLocale::class,
 ```
 
-After installation, the config file must be setup within
-your project. To do so, simply run the following Artisan
-command.
+To customise the mappings, publish the config file with:
 
 ```bash
 php artisan vendor:publish --provider="JordJD\LaravelDomainToLocale\ServiceProvider"
@@ -47,12 +47,15 @@ return [
     'map' => [
 
         'example.com'   => 'en',
-        'example.co.uk' => 'en',
+        '*.example.co.uk' => 'en',
         'example.pl'    => 'pl',
         'example.de'    => 'de',
         'example.fr'    => 'fr',
 
-    ]
+    ],
+
+    // Optional locale when no mapping matches.
+    'fallback' => null,
 
 ];
 ```
@@ -60,3 +63,5 @@ return [
 Adding new lines to the `map` array will allow you to
 specify which domain names should set which locales.
 Once configured, everything else is automatic.
+
+Exact host mappings take precedence. A wildcard such as `*.example.co.uk` matches `shop.example.co.uk` and deeper subdomains, but not the bare `example.co.uk` host. Matching is case-insensitive and ignores a trailing dot.

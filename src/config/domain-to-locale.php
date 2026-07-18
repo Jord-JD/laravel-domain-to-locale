@@ -12,7 +12,9 @@ return [
         //'example.de'    => 'de',
         //'example.fr'    => 'fr',
 
-    ]
+    ],
+
+    // Optional locale used when no exact or wildcard mapping matches.
+    'fallback' => null,
 
 ];
-
