@@ -12,7 +12,7 @@ class DomainToLocaleTest extends TestCase
 {
     private $app;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -27,9 +27,14 @@ class DomainToLocaleTest extends TestCase
                 'fallback' => 'de',
             ),
         )));
+        $this->app->instance('translator', new class {
+            public function setLocale($locale)
+            {
+            }
+        });
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         Application::setInstance(null);
         parent::tearDown();
